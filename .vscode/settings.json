@@ -1,0 +1,8 @@
+{
+  "picowgo.pythonPath": "/usr/local/bin/python3",
+  "cSpell.words": [
+    "Pico",
+    "VBUS",
+    "VSYS"
+  ]
+}
