@@ -64,21 +64,11 @@ class HD44780(object):
 
     # Toggle 'Enable' pin
     self.toggle_enable()
-    # print(
-    #   # '| {rs} | {en} | {d07}{d06}{d05}{d04}_{d17}{d16}{d15}{d14}'.format(
-    #   '| {rs} | {en} | 00{d05}{d04}_00{d15}{d14}'.format(
-    #     rs=int(mode),
-    #     en=1,
-    #     d04=int(bool(bits & 0x10)),
-    #     d05=int(bool(bits & 0x20)),
-    #     d06=int(bool(bits & 0x30)),
-    #     d07=int(bool(bits & 0x40)),
-    #     d14=int(bool(bits & 0x01)),
-    #     d15=int(bool(bits & 0x02)),
-    #     d16=int(bool(bits & 0x04)),
-    #     d17=int(bool(bits & 0x08)),
-    #   )
-    # )
+    # bits を２真数で表示
+    # print('{mode:01b} {bits:02X}'.format(
+    #   mode=mode,
+    #   bits=bits,
+    # ))
 
   def init(self):
     # Initialise display
@@ -103,15 +93,6 @@ class HD44780(object):
 if __name__ == '__main__':
   print("Starting")
   try:
-    print("| RS | EN | D |")
-    # lcd = HD44780(
-    #   rs=16,
-    #   en=17,
-    #   d4=18,
-    #   d5=19,
-    #   d6=20,
-    #   d7=21,
-    # )
     lcd = HD44780(
       rs=21,
       en=20,
@@ -121,35 +102,13 @@ if __name__ == '__main__':
       d7=16,
     )
     lcd.init()
-    lcd.string("ab", HD44780.LINE1)
+    lcd.string("abc", HD44780.LINE1)
+    lcd.string("", HD44780.LINE2)
     # while True:
     #   lcd.string("ab", HD44780.LINE1)
     #   sleep_us(100_000)
     # lcd.string("1234567890123456", HD44780.LINE1)
     # lcd.string("abcdefghijklmnop", HD44780.LINE2)
-
-
-    # | RS | EN | D4 | D5 | D6 | D7 |
-    # |  0 |  1 |  0 |  0 |  1 |  0 |
-    # 
-    # | RS | EN | D4 | D5 | D6 | D7 |
-    # |  0 |  1 |  1 |  1 |  1 |  0 |
-    # |  0 |  1 |  1 |  1 |  0 |  0 |
-    # |  0 |  1 |  1 |  1 |  1 |  0 |
-    # |  0 |  1 |  0 |  1 |  0 |  0 |
-    # |  0 |  1 |  0 |  0 |  0 |  0 |
-    # |  0 |  1 |  0 |  1 |  1 |  0 |
-    # |  0 |  1 |  0 |  0 |  0 |  0 |
-    # |  0 |  1 |  0 |  0 |  1 |  1 |
-    # |  0 |  1 |  0 |  1 |  1 |  0 |
-    # |  0 |  1 |  0 |  0 |  0 |  1 |
-    # |  0 |  1 |  0 |  0 |  0 |  0 |
-    # |  0 |  1 |  1 |  0 |  0 |  0 |
-    # |  0 |  1 |  0 |  0 |  0 |  0 | # ab
-    # |  0 |  1 |  0 |  0 |  0 |  0 |
-    # |  1 |  1 |  0 |  1 |  1 |  1 |
-    # |  1 |  1 |  1 |  0 |  0 |  0 |
-    # |  1 |  1 |  0 |  1 |  1 |  1 |
   except KeyboardInterrupt:
     pass
   finally:

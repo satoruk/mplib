@@ -33,10 +33,10 @@
 | Hole    | Pin | Name | Description                  |
 | ------- | --- | ---- | ---------------------------- |
 | 05 (36) | 1   | VDD  | Power supply for logic (+5V) |
-| 08 (33) | 2   | VSS  | Ground                       |
-|         | 3   | V0   | Contrast adjustment          |
+| GND     | 2   | VSS  | Ground                       |
+| GND + R | 3   | Vo   | Contrast adjustment          |
 | 14 (27) | 4   | RS   | Register select              |
-| NONE    | 5   | R/W  | Read/Write                   |
+| GND     | 5   | R/W  | Read/Write                   |
 | 15 (26) | 6   | E    | Enable signal                |
 | NONE    | 7   | DB0  | Data bus line 0              |
 | NONE    | 8   | DB1  | Data bus line 1              |
@@ -47,3 +47,4 @@
 | 19 (22) | 13  | DB6  | Data bus line 6              |
 | 20 (21) | 14  | DB7  | Data bus line 7              |
 
+`Vo` の `GND + R` は半固定抵抗でコントラスト調整を行う。
