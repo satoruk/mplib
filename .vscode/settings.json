@@ -1,8 +1,20 @@
 {
-  "picowgo.pythonPath": "/usr/local/bin/python3",
-  "cSpell.words": [
-    "Pico",
-    "VBUS",
-    "VSYS"
-  ]
+    "picowgo.pythonPath": "/usr/local/bin/python3",
+    "picowgo.autoConnect": true,
+    "cSpell.words": [
+        "Pico",
+        "VBUS",
+        "VSYS"
+    ],
+    "python.linting.enabled": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "picowgo.syncFolder": ".",
+    "python.analysis.typeshedPaths": [
+        ".vscode/Pico-W-Stub"
+    ],
+    "python.analysis.extraPaths": [
+        ".vscode/Pico-W-Stub/stubs"
+    ],
+    "editor.tabSize": 2
 }
