@@ -1,0 +1,10 @@
+{
+  "urls": [
+    ["app/gram_scale/__init__.py", "github:satoruk/mplib/app/gram_scale/__init__.py"],
+    ["app/gram_scale/GramScale.py", "github:satoruk/mplib/app/gram_scale/GramScale.py"]
+  ],
+  "deps": [
+    ["github:satoruk/mplib/load_cell/base", "main"]
+  ],
+  "version": "0.1"
+}
