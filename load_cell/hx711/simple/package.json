@@ -4,7 +4,7 @@
     ["load_cell/hx711/simple/HX711.py", "github:satoruk/mplib/load_cell/hx711/simple/HX711.py"]
   ],
   "deps": [
-    ["github:satoruk/mplib/load_cell/base", "latest"]
+    ["github:satoruk/mplib/load_cell/base", "main"]
   ],
   "version": "0.1"
 }
