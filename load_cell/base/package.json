@@ -1,0 +1,8 @@
+{
+  "urls": [
+    ["load_cell/base/__init__.py", "github:satoruk/mplib/load_cell/base/__init__.py"],
+    ["load_cell/base/LoadCellBase.py", "github:satoruk/mplib/load_cell/base/LoadCellBase.py"]
+  ],
+  "deps": [],
+  "version": "0.1"
+}
