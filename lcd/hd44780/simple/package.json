@@ -1,0 +1,8 @@
+{
+  "urls": [
+    ["lcd/hd44780/simple/__init__.py", "github:satoruk/mplib/lcd/hd44780/simple/__init__.py"],
+    ["lcd/hd44780/simple/HD44780.py", "github:satoruk/mplib/lcd/hd44780/simple/HD44780.py"]
+  ],
+  "deps": [],
+  "version": "0.1"
+}
