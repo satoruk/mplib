@@ -1,0 +1,10 @@
+{
+  "urls": [
+    ["load_cell/hx711/simple/__init__.py", "github:satoruk/mplib/load_cell/hx711/simple/__init__.py"],
+    ["load_cell/hx711/simple/HX711.py", "github:satoruk/mplib/load_cell/hx711/simple/HX711.py"]
+  ],
+  "deps": [
+    ["github:satoruk/mplib/load_cell/base"]
+  ],
+  "version": "0.1"
+}
