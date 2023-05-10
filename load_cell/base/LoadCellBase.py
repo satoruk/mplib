@@ -1,4 +1,4 @@
-class ADCBase:
+class LoadCellBase:
   def read(self) -> int:
     raise NotImplementedError("read() is not implemented")
 
