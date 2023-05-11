@@ -1,1 +1,1 @@
-from .LoadCellBase import *
+from .GramScale import *
