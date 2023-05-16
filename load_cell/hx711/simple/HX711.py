@@ -40,17 +40,21 @@ class HX711(LoadCellBase):
         else:
             raise OSError("Sensor does not respond")
 
-        # shift in data, and gain & channel info
+        # read data
         result = 0
-        for j in range(24 + self.GAIN):
+        for _ in range(24):
             state = disable_irq()
             self.pSCK(True)
             self.pSCK(False)
             enable_irq(state)
             result = (result << 1) | self.pOUT()
 
-        # shift back the extra bits
-        result >>= self.GAIN
+        # read gain & channel info
+        for _ in range(self.GAIN):
+            state = disable_irq()
+            self.pSCK(True)
+            self.pSCK(False)
+            enable_irq(state)
 
         # check sign
         if result > 0x7fffff:
